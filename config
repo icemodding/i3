@@ -215,6 +215,3 @@ exec --no-startup-id compton -f
 exec --no-startup-id firefox 
 
 exec --no-startup-id /home/ice/.Telegram/Telegram
-
-# Conky
-# exeasdasartup-id conky -c /home/ice/Linux/Conky/Harmattan/.harmattan-themes/Transparent/God-Mode/.conkyrc
