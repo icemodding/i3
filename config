@@ -108,7 +108,7 @@ set $workspace2 "2: "
 set $workspace3 "3: "
 set $workspace4 "4: "
 set $workspace5 "5: "
-set $workspace6 "6: "
+set $workspace6 "6: "
 set $workspace7 "7: "
 set $workspace8 "8: "
 
@@ -219,7 +219,7 @@ hide_edge_borders both
 exec --no-startup-id nm-applet
 
 # Volumen
-exec --no-startup-id volumeicon
+# exec --no-startup-id volumeicon
 
 # Nitrogen
 exec --no-startup-id nitrogen --restore
