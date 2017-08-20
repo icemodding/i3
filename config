@@ -36,7 +36,10 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec dmenu_run -i -nb '$bg-color' -nf '#FFFFFF' -sb '#FF9C00' -sf '#151617'
+
+# bindsym $mod+d exec rofi -show run -lines 5 -opacity "85"
+
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -92,12 +95,28 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+# Screenshot
+set $screenshot --no-startup-id gnome-screenshot
+set $screenshot-media --no-startup-id gnome-screenshot -i
+
+bindsym Print exec $screenshot
+bindsym Shift+Print exec $screenshot-media
+
 # nombres del area de trabajo
 set $workspace1 "1: "
 set $workspace2 "2: "
 set $workspace3 "3: "
 set $workspace4 "4: "
 set $workspace5 "5: "
+set $workspace6 "6: "
+set $workspace7 "7: "
+set $workspace8 "8: "
+
+# Desplazar entre workspaces
+bindsym $mod+Home workspace $workspace1
+bindsym $mod+End workspace $workspace10
+bindsym $mod+Prior workspace prev
+bindsym $mod+Next workspace next
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
@@ -105,9 +124,9 @@ bindsym $mod+2 workspace $workspace2
 bindsym $mod+3 workspace $workspace3
 bindsym $mod+4 workspace $workspace4
 bindsym $mod+5 workspace $workspace5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
+bindsym $mod+6 workspace $workspace6
+bindsym $mod+7 workspace $workspace7
+bindsym $mod+8 workspace $workspace8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
@@ -117,14 +136,19 @@ bindsym $mod+Shift+2 move container to $workspace2
 bindsym $mod+Shift+3 move container to $workspace3
 bindsym $mod+Shift+4 move container to $workspace4
 bindsym $mod+Shift+5 move container to $workspace5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+6 move container to $workspace6
+bindsym $mod+Shift+7 move container to $workspace7
+bindsym $mod+Shift+8 move container to $workspace8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 assign [class="Firefox"] $workspace2
 assign [class="TelegramDesktop"] $workspace3
+assign [class="vlc"] move to workspace $workspace6
+#assign [class="Spotify"] $workspace6
+assign [class="GIMP Startup"] move workspace $workspace7
+for_window [window_role="gimp-dock"] floating disable; move left; resize shrink width 50 px or 50ppt
+for_window [window_role="gimp-toolbox"] floating disable; move right; resize grow width 30 px or 30ppt
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -132,6 +156,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -206,12 +231,17 @@ exec --no-startup-id setxkbmap -layout latam
 exec --no-startup-id synclient HorizTwoFingerScroll=1
 
 # touchpad dos dedos
-exec --no-startup-id synclient TapButton2=3
-exec --no-startup-id synclient TapButton1=1
+exec --no-startup-id synclient TapButton1=1 &
+exec --no-startup-id synclient TapButton2=3 &
 
 # Compton
 exec --no-startup-id compton -f
 
+# Autostart 
 exec --no-startup-id firefox 
-
 exec --no-startup-id /home/ice/.Telegram/Telegram
+#exec --no-startup-id vlc
+#exec --no-startup-id Spotify
+
+# Conky
+# exeasdasartup-id conky -c /home/ice/Linux/Conky/Harmattan/.harmattan-themes/Transparent/God-Mode/.conkyrc
