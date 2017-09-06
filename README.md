@@ -12,4 +12,4 @@ Archivos de configuraciones de i3
 Entre muchas otras cosas más que tengo instaladas para poder personalizar al máximo nuestro i3wm.
 
 
-![texto cualquiera por si no carga la imagen](http://i.imgur.com/PEvn9zE.png)
+![texto cualquiera por si no carga la imagen](https://i.imgur.com/tafPUgF.png)
