@@ -32,6 +32,9 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
+# Terminal variable
+set $term termite
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -100,9 +103,28 @@ set $screenshot-media --no-startup-id gnome-screenshot -i
 bindsym Print exec $screenshot
 bindsym Shift+Print exec $screenshot-media
 
-# Posistion Windows Left/Right
+# Posistion Floating Windows Left/Right
 bindsym $mod+Shift+p floating enable; border none; resize set 654px 262px; sticky enable; move window to position 704 px 230 px
 bindsym $mod+Shift+m floating enable; border none; resize set 654px 262px; sticky enable; move window to position 8 px 230 px
+
+# Audio Settings
+
+# mocp
+# run mocp
+bindsym $mod+m exec $term -e mocp
+
+# Control Songs
+bindsym XF86AudioPlay  exec --no-startup-id mocp -G
+bindsym XF86AudioPause exec --no-startup-id mocp -G
+bindsym XF86AudioNext  exec --no-startup-id mocp -f
+bindsym XF86AudioPrev  exec --no-startup-id mocp -r
+bindsym XF86AudioStop  exec --no-startup-id mocp -s
+
+
+# Volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5
+bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5
+bindsym XF86AudioMute        exec --no-startup-id pamixer -t
 
 # nombres del area de trabajo
 set $workspace1 "1: "
@@ -147,16 +169,17 @@ bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
 assign [class="Firefox"] $workspace2
+assign [class="Google-chrome"] $workspace2
 assign [class="TelegramDesktop"] $workspace3
 assign [class="Vlc"] $workspace5
 assign [class="Thunar"] $workspace6
 assign [class="VirtualBox"] $workspace6
 assign [class="Simplescreenrecorder"] $workspace10
+for_window [class="Spotify"] floating enable move container to workspace $workspace4
 #assign [class="Termite"] $workspace1
-#assign [class="Spotify"] $workspace6
-for_window [class="Gimp"] floating enable
-#for_window [window_role="gimp-dock"] floating disable; move left; resize shrink width 50 px or 50ppt
-#for_window [window_role="gimp-toolbox"] floating disable; move right; resize grow width 30 px or 30ppt
+for_window [class="Gimp"] floating enable move container to workspace $workspace7
+#for_window [window_role="gimp-dock"] floating disable; move left; resize shrink width 80px
+#for_window [window_role="gimp-toolbox"] floating disable; move right; resize grow width 150px
 #for_window [class="Termite"] floating enable border pixel 2 move left 354px move down 230px
 
 # reload the configuration file
@@ -230,8 +253,11 @@ exec --no-startup-id nm-applet
 # Volumen
 # exec --no-startup-id volumeicon &
 
+# Background: 
 # Nitrogen
-exec --no-startup-id nitrogen --restore &
+# exec --no-startup-id nitrogen --restore &
+exec_always --no-startup-id feh --bg-scale ~/Picturz/Wallpapers/by\ ice/devilmaycry-wp-arch.png
+
 
 # Idioma
 exec --no-startup-id setxkbmap -layout latam
@@ -250,3 +276,4 @@ exec --no-startup-id compton -f
 #exec --no-startup-id firefox &
 #exec --no-startup-id /home/ice/.Telegram/Telegram &
 exec --no-startup-id numlockx &
+
