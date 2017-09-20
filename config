@@ -109,9 +109,15 @@ bindsym $mod+Shift+m floating enable; border none; resize set 654px 262px; stick
 
 # Audio Settings
 
+# Volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5
+bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5
+bindsym XF86AudioMute        exec --no-startup-id pamixer -t
+
 # mocp
 # run mocp
 bindsym $mod+m exec $term -e mocp
+#bindsym $mod
 
 # Control Songs
 bindsym XF86AudioPlay  exec --no-startup-id mocp -G
@@ -120,11 +126,8 @@ bindsym XF86AudioNext  exec --no-startup-id mocp -f
 bindsym XF86AudioPrev  exec --no-startup-id mocp -r
 bindsym XF86AudioStop  exec --no-startup-id mocp -s
 
-
-# Volume
-bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5
-bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5
-bindsym XF86AudioMute        exec --no-startup-id pamixer -t
+# Calculadora
+bindsym XF86Calculator exec --no-startup-id gnome-calculator
 
 # nombres del area de trabajo
 set $workspace1 "1: "
