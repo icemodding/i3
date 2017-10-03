@@ -104,8 +104,8 @@ bindsym Print exec $screenshot
 bindsym Shift+Print exec $screenshot-media
 
 # Posistion Floating Windows Left/Right
-bindsym $mod+Shift+p floating enable; border none; resize set 654px 262px; sticky enable; move window to position 704 px 230 px
-bindsym $mod+Shift+m floating enable; border none; resize set 654px 262px; sticky enable; move window to position 8 px 230 px
+bindsym $mod+Shift+p floating enable; border none; resize set 654px 262px; sticky disable; move window to position 709 px 230 px
+bindsym $mod+Shift+m floating enable; border none; resize set 654px 262px; sticky disable; move window to position 3 px 230 px
 
 # Audio Settings
 
@@ -131,14 +131,14 @@ bindsym XF86Calculator exec --no-startup-id gnome-calculator
 
 # nombres del area de trabajo
 set $workspace1 "1: "
-set $workspace2 "2: "
+set $workspace2 "2: "
 set $workspace3 "3: "
 set $workspace4 "4: "
 set $workspace5 "5: "
 set $workspace6 "6: "
 set $workspace7 "7: "
 set $workspace8 "8: "
-set $workspace9 "9: " 
+set $workspace9 "9: "
 set $workspace10 "10: "
 
 # Desplazar entre workspaces
@@ -182,8 +182,7 @@ for_window [class="Spotify"] floating enable move container to workspace $worksp
 #assign [class="Termite"] $workspace1
 for_window [class="Gimp"] floating enable move container to workspace $workspace7
 #for_window [window_role="gimp-dock"] floating disable; move left; resize shrink width 80px
-#for_window [window_role="gimp-toolbox"] floating disable; move right; resize grow width 150px
-#for_window [class="Termite"] floating enable border pixel 2 move left 354px move down 230px
+#for_window [window_role="gimp-toolbox"] floating disable; move right; resize set 654px 262px
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -251,23 +250,21 @@ bar {
 hide_edge_borders both
 
 # Red
-exec --no-startup-id nm-applet
+exec --no-startup-id nm-applet &
 
 # Volumen
 # exec --no-startup-id volumeicon &
 
-# Background: 
+# Background:
 # Nitrogen
 # exec --no-startup-id nitrogen --restore &
 exec_always --no-startup-id feh --bg-scale ~/Picturz/Wallpapers/by\ ice/devilmaycry-wp-arch.png
 
-
 # Idioma
 exec --no-startup-id setxkbmap -layout latam
 
-# touchpad dos dedos
-exec --no-startup-id synclient TapButton1=1 &
-exec --no-startup-id synclient TapButton2=3 &
+# touchpad
+exec --no-startup-id synclient TapButton1=1 TapButton2=3 &
 
 # touchpad para desplazamiento horizontal
 exec --no-startup-id synclient HorizTwoFingerScroll=1 &
@@ -275,8 +272,7 @@ exec --no-startup-id synclient HorizTwoFingerScroll=1 &
 # Compton
 exec --no-startup-id compton -f
 
-# Autostart 
+# Autostart
 #exec --no-startup-id firefox &
 #exec --no-startup-id /home/ice/.Telegram/Telegram &
 exec --no-startup-id numlockx &
-
