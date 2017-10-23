@@ -1,0 +1,18 @@
+!!!!!! XConfig file !!!!!!
+
+
+!!! ROFI !!!
+! ! Use extended color schem
+rofi.color-enabled:                  true
+! Color scheme for normal row
+rofi.color-normal:                   argb:00000000,  #FFFFFF , argb:00000000,  argb:00000000,  #f8ae19 , 
+! ! Color scheme for urgent row
+rofi.color-urgent:                   argb:90000000,  #2f343f , argb:90000000,  #2f343f ,  
+#2f343f
+! ! Color scheme for active row
+rofi.color-active:                   argb:99FFFFFF,  #FFFFFF , argb:99FFFFFF,  #FFFFFF ,  
+#000000
+! ! Color scheme window
+rofi.color-window:                   argb:CC2f343f,  #2f343f ,  #2f343f
+! ! Separator style (none, dash, solid)
+rofi.separator-style:                none
