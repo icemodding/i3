@@ -3,8 +3,8 @@ rofi.color-enabled: true
 !                  bg             border   separator
 rofi.color-window: argb:90000000, 900000,  900000,
 !                  bg             fg       bg-alt   hl-bg    hl-fg
-rofi.color-normal: argb:00000000, #f8ae19, 000000, 000000,   #FFFFFF
-rofi.color-active: argb:00000000, #f8ae19, argb:00000000,   argb:00000000, #FFFFFF
+rofi.color-normal: argb:00000000, #FFFFFF, 000000, 000000,   #f8ae19
+rofi.color-active: argb:00000000, #FFFFFF, argb:00000000,   argb:00000000, #f8ae19
 rofi.color-urgent: #cc241d, #2f343f, #cc241d, #fb4934, #2f343f
 
 rofi.separator-style: none
