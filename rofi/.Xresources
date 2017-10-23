@@ -1,0 +1,22 @@
+! Enable the extended coloring options
+rofi.color-enabled: true
+!                  bg             border   separator
+rofi.color-window: argb:90000000, 900000,  900000,
+!                  bg             fg       bg-alt   hl-bg    hl-fg
+rofi.color-normal: argb:00000000, #f8ae19, 000000, 000000,   #FFFFFF
+rofi.color-active: argb:00000000, #f8ae19, argb:00000000,   argb:00000000, #FFFFFF
+rofi.color-urgent: #cc241d, #2f343f, #cc241d, #fb4934, #2f343f
+
+rofi.separator-style: none
+rofi.sidebar-mode: true
+rofi.bw: 1
+rofi.columns: 1
+rofi.padding: 16
+
+rofi.yoffset: 0
+rofi.fake-transparency: true
+rofi.location: 0
+rofi.width: 500
+rofi.font: Ubuntu
+rofi.lines: 12
+rofi.fixed-num-lines: true
