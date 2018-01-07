@@ -238,6 +238,7 @@ client.urgent $urgent-bg-color $urgent-bg-color $text-color #00ff00
 # finds out, if available)
 bar {
         status_command i3blocks -c ~/.config/i3/i3blocks.conf
+        font pango:sans, awesome 10
         colors {
                 background $bg-color
                 separator #757575
