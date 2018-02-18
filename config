@@ -103,7 +103,8 @@ set $screenshot --no-startup-id gnome-screenshot
 set $screenshot-media --no-startup-id gnome-screenshot -i
 
 bindsym Print exec $screenshot
-bindsym Shift+Print exec $screenshot-media
+#bindsym Shift+Print exec $screenshot-media
+bindsym $mod+Print exec $screenshot-media
 
 # Posistion Floating Windows Left/Right
 bindsym $mod+Shift+p floating enable; border none; resize set 654px 262px; sticky disable; move window to position 709 px 230 px
@@ -133,7 +134,7 @@ bindsym XF86Calculator exec --no-startup-id gnome-calculator
 
 # nombres del area de trabajo
 set $workspace1 "1: "
-set $workspace2 "2: "
+set $workspace2 "2: "
 set $workspace3 "3: "
 set $workspace4 "4: "
 set $workspace5 "5: "
@@ -179,8 +180,9 @@ assign [class="TelegramDesktop"] $workspace3
 assign [class="Vlc"] $workspace5
 assign [class="Thunar"] $workspace6
 assign [class="VirtualBox"] $workspace6
+assign [class="qBittorrent"] $workspace8
 assign [class="Simplescreenrecorder"] $workspace10
-for_window [class="Spotify"] floating enable move container to workspace $workspace4
+#for_window [class="Spotify"] floating enable move container to workspace $workspace4
 #assign [class="Termite"] $workspace1
 for_window [class="Gimp"] floating enable move container to workspace $workspace7
 #for_window [window_role="gimp-dock"] floating disable; move left; resize shrink width 80px
@@ -238,7 +240,7 @@ client.urgent $urgent-bg-color $urgent-bg-color $text-color #00ff00
 # finds out, if available)
 bar {
         status_command i3blocks -c ~/.config/i3/i3blocks.conf
-        font pango:sans, awesome 10
+        #font pango:Font Awesome 5 Free 8
         colors {
                 background $bg-color
                 separator #757575
