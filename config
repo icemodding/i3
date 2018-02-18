@@ -120,7 +120,6 @@ bindsym XF86AudioMute        exec --no-startup-id pamixer -t
 # mocp
 # run mocp
 bindsym $mod+m exec $term -e mocp
-#bindsym $mod
 
 # Control Songs
 bindsym XF86AudioPlay  exec --no-startup-id mocp -G
