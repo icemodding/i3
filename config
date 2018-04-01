@@ -176,7 +176,7 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 assign [class="Google-chrome"] $workspace2
 assign [class="Firefox"] $workspace2
 assign [class="TelegramDesktop"] $workspace3
-assign [class="Vlc"] $workspace5
+assign [class="vlc"] $workspace5
 assign [class="Thunar"] $workspace6
 assign [class="VirtualBox"] $workspace6
 assign [class="qBittorrent"] $workspace8
