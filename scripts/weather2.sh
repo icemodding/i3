@@ -10,7 +10,8 @@ color=""
 status=0
 
 
-URL='https://www.accuweather.com/en/ar/san-miguel-de-tucuman/11869/weather-forecast/11869'
+#URL='https://www.accuweather.com/en/ar/san-miguel-de-tucuman/11869/weather-forecast/11869'
+URL='https://www.accuweather.com/es/ar/san-miguel-de-tucuman/11869/current-weather/11869'
 SITE="$(curl -s "$URL")"
 
 weather="$(echo "$SITE" | awk -F\' '/acm_RecentLocationsCarousel\.push/{print $14 }'| head -1)"
