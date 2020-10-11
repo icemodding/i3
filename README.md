@@ -13,3 +13,5 @@ Entre muchas otras cosas m√°s que tengo instaladas para poder personalizar al m√
 
 ![texto cualquiera por si no carga la imagen](https://i.imgur.com/Nh1cLpx.png)
 ![texto cualquiera por si no carga la imagen](https://i.imgur.com/swgTpdI.png)
+(https://i.imgur.com/69CdXtm.png)
+(https://i.imgur.com/G0PeiQi.png)
