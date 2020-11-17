@@ -138,7 +138,7 @@ set $workspace2 "2: "
 set $workspace3 "3: "
 set $workspace4 "4: "
 set $workspace5 "5: "
-set $workspace6 "6: "
+set $workspace6 "6: "
 set $workspace7 "7: "
 set $workspace8 "8: "
 set $workspace9 "9: "
@@ -267,7 +267,7 @@ exec --no-startup-id nm-applet &
 # Background:
 # Nitrogen
 # exec --no-startup-id nitrogen --restore &
-exec_always --no-startup-id feh --bg-scale ~/Picturz/Wallpapers/Edited/ryuk-death-note-tetrad-smerti-riuk-smert-by-ice3.jpg
+exec_always --no-startup-id feh --bg-scale ~/Picturz/Wallpapers/Edited/Arch/ryuk-death-note-tetrad-smerti-riuk-smert-by-ice3-KISS.jpg
 
 # Idioma
 exec --no-startup-id setxkbmap -layout latam &
