@@ -129,8 +129,8 @@ bindsym XF86AudioNext  exec --no-startup-id mocp -f
 bindsym XF86AudioPrev  exec --no-startup-id mocp -r
 bindsym XF86AudioStop  exec --no-startup-id mocp -s
 
-# Calculadora
-bindsym XF86Calculator exec --no-startup-id gnome-calculator
+# Calculator
+bindsym XF86Calculator exec --no-startup-id galculator
 
 # nombres del area de trabajo
 set $workspace1 "1: "
@@ -184,6 +184,9 @@ assign [class="vlc"] $workspace5
 assign [class="Thunar"] $workspace6
 assign [class="VirtualBox"] $workspace6
 assign [class="qBittorrent"] $workspace8
+assign [class="Snes9x-gtk"] $workspace9
+assign [class="Gens"] $workspace9
+assign [class="Pcsxr"] $workspace9
 assign [class="Simplescreenrecorder"] $workspace10
 #for_window [class="Spotify"] floating enable move container to workspace $workspace4
 #assign [class="Termite"] $workspace1
