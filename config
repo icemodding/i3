@@ -104,12 +104,10 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # Screenshot
-#set $screenshot --no-startup-id gnome-screenshot
 set $screenshot-media --no-startup-id gnome-screenshot -i
 for_window [class="Gnome-screenshot"] floating enable
 
 #bindsym Print exec $screenshot
-#bindsym Shift+Print exec $screenshot-media
 bindsym $mod+Print exec $screenshot-media
 
 # Posistion Floating Windows Left/Right
@@ -191,7 +189,6 @@ assign [class="qBittorrent"] $workspace8
 assign [class="simplescreenrecorder"] $workspace10
 assign [class="openshot"] $workspace10
 assign [class="Gimp"] $workspace7
-#for_window [class="Gimp"] floating enable
 #for_window [window_role="gimp-dock"] floating disable; move left; resize shrink width 80px
 #for_window [window_role="gimp-toolbox"] floating disable; move right; resize set 654px 262px
 
@@ -266,19 +263,13 @@ hide_edge_borders both
 #exec --no-startup-id nm-applet
 
 # Icono de Volumen
-#exec --no-startup-id volumeicon &
 exec --no-startup-id pasystray
 
+#Wallpaper
 exec --no-startup-id feh --bg-scale /home/ice/Pictures/debian-skull1v1.png
-
-# Idioma
-#exec --no-startup-id setxkbmap -layout latam &
 
 # Picom
 exec --no-startup-id picom --config ~/.config/picom/picom.conf
-
-# .Xresources
-#exec --no-startup-id sleep 1 && xrdb -merge ~/.Xresources
 
 # Autostart
 exec --no-startup-id Brave-browser 
@@ -287,4 +278,3 @@ exec_always --no-startup-id numlockx on
 
 #Resolución  con un 10% renderizado
 exec --no-startup-id autorandr --change
-#exec --no-startup-id xrandr --output HDMI-A-0 --scale 1x1 --panning 1360x768
