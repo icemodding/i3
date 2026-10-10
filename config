@@ -31,13 +31,10 @@ font pango:Inter 9
 floating_modifier $mod
 
 # start a terminal
-#bindsym $mod+Return exec rxvt-unicode
-#assign [class="URxvt"] $workspace1
 bindsym $mod+Return exec alacritty
 assign [class="Alacritty"] $workspace1
 
 # Terminal variable
-#set $term termite
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -178,7 +175,7 @@ bindsym $mod+Shift+8 move container to workspace $workspace8
 bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
-assign [class="Sublime_text"] $workspace1
+#assign [class="Sublime_text"] $workspace1
 assign [class="(Brave-browser|firefox|Google-chrome)"] $workspace2
 assign [class="Hexchat"] $workspace3
 assign [class="TelegramDesktop"] $workspace3
@@ -259,22 +256,18 @@ bar {
 # Borders
 hide_edge_borders both
 
-# Red
-#exec --no-startup-id nm-applet
-
-# Icono de Volumen
-exec --no-startup-id pasystray
+#Resolución  con un 10% renderizado
+exec --no-startup-id autorandr --change
 
 #Wallpaper
 exec --no-startup-id feh --bg-scale /home/ice/Pictures/debian-skull1v1.png
 
 # Picom
-exec --no-startup-id picom --config ~/.config/picom/picom.conf
+exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
 
 # Autostart
-exec --no-startup-id Brave-browser 
+exec --no-startup-id alacritty
+exec --no-startup-id subl
+exec --no-startup-id brave-browser
 exec --no-startup-id ~/Programs/Telegram/Telegram
 exec_always --no-startup-id numlockx on
-
-#Resolución  con un 10% renderizado
-exec --no-startup-id autorandr --change
