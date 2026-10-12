@@ -270,4 +270,5 @@ exec --no-startup-id alacritty
 exec --no-startup-id subl
 exec --no-startup-id brave-browser
 exec --no-startup-id ~/Programs/Telegram/Telegram
+exec --no-startup-id discord
 exec_always --no-startup-id numlockx on
